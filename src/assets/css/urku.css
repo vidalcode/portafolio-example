@@ -1272,7 +1272,7 @@ body {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
           align-items: flex-end;
-  height: 100vh;
+  height: 80vh;
   padding-bottom: 1.5rem;
   width: 100%;
 }
@@ -1361,7 +1361,9 @@ body {
 }
 @media (min-width: 40em) {
   .item-inside-1 {
-    background-size: 150%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
