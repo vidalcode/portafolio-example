@@ -13,12 +13,10 @@ export class InfoPaginaService {
   equipo: any[] = [];
 
   constructor(public http: HttpClient) {
-    console.log('Servicio de infoPagina listo');
     this.cargarEquipo();
     //leer el archivo JSON
 
     this.http.get('assets/data/data-pagina.json').subscribe((resp: InfoPagina) => {
-      console.log( resp.NombreCorto );
       this.cargada = true;
       this.info = resp;
     })
@@ -27,7 +25,6 @@ export class InfoPaginaService {
   private cargarInfo() {
     //leer el archivo JSON
     this.http.get('assets/data/data-pagina.json').subscribe((resp: InfoPagina) => {
-      console.log( resp.NombreCorto );
       this.cargada = true;
       this.info = resp;
     })
@@ -38,7 +35,6 @@ export class InfoPaginaService {
     this.http.get('https://angular-html-d937b-default-rtdb.firebaseio.com/equipo.json').subscribe( (resp: any ) => {
       this.cargada = true;
       this.equipo = resp;
-      console.log(resp);
     })
   }
 }
