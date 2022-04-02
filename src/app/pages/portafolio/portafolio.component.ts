@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import 'animate.css';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-portafolio',
@@ -8,7 +9,7 @@ import 'animate.css';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public productoService: ProductosService) { }
 
   ngOnInit(): void {
   }
